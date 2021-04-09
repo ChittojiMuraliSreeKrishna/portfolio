@@ -1,0 +1,70 @@
+.projects__title::first-letter{
+    color: var(--green);
+    font-weight: var(--text-bold);
+}
+.project__title{
+    color: var(--light);
+    font-size: var(--fs-xl);
+    text-align: center;
+    margin-top: 2rem;
+}
+.card{
+    color: var(--light);
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid var(--medium-green);
+    background: transparent;
+    position: relative;
+}
+.close{
+    color: var(--green);
+}
+.close:hover{
+    color: var(--light);
+}
+.codebtn{
+    background: var(--yellow);
+    color: var(--dark-green);
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+}
+.card-footer{
+    display: flex;
+    justify-content: flex-start;
+}
+.College .card-footer{
+    display: grid;
+    place-items: left;
+    
+}
+
+.codebtn:hover{
+    color: var(--black);
+    text-decoration: none;
+    font-weight: var(--text-bold);
+}
+.projects{
+    display: grid;
+    position: relative;
+    justify-content: space-around;
+}
+@media (min-width: 1000px){
+    .projects{
+        display: flex;
+    }
+    .card{
+        margin: 0 1rem;
+    }
+}
+.card-title{
+    font-weight: var(--text-bold);
+    color: var(--green);
+    text-align: center;
+    transition: 1s;
+}
+.card-body p{
+    display: inline-block;
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+
