@@ -4,7 +4,7 @@ function Intro() {
   return (
     <div className="Intro container" id="home">
       <div className="intro__image">
-		<img src="./images/mine.jpg" alt="" className="intro__img" />
+		<img src="https://raw.githubusercontent.com/ChittojiMuraliSreeKrishna/images/main/images/mine.jpg?token=AO3RFNBDH2GP4CAJZIXTJB3AOEWPG" alt="" className="intro__img" />
 		</div>
 		<div className=".intro__text">
 		<h1 className="intro__title">Hi I'm <strong>Murali Sree Krishna

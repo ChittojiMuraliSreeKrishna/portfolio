@@ -10,12 +10,12 @@ function Personal() {
                 <h3>Social Media PHP</h3>
                 </div>
                 <div className="card-body">
-                <img src="./images/personal/ps6.png" className="card-img-bottom" alt="" />
+                <img className="card-img-bottom" src="https://raw.githubusercontent.com/ChittojiMuraliSreeKrishna/images/main/images/personal/ps6.png?token=AO3RFNC3MFSPDRGJBG2K2FDAOEVNC" alt="" />
                 <div className="content">
-                    <h5 className="title">#PHP</h5>
-                    <h5 className="title">#HTML</h5>
-                    <h5 className="title">#CSS</h5>
-                    <h5 className="title">#JavaScript</h5>
+                    <h5 className="title php">#PHP</h5>
+                    <h5 className="title html">#HTML</h5>
+                    <h5 className="title css">#CSS</h5>
+                    <h5 className="title js">#JavaScript</h5>
                 </div>
                 </div>
                 <div className="card-footer">
@@ -27,12 +27,12 @@ function Personal() {
                 <h3>Todo List PHP</h3>
                 </div>
                 <div className="card-body">
-                <img className="card-img-bottom" src="./images/personal/ps7.png" alt="" />
+                <img src="https://raw.githubusercontent.com/ChittojiMuraliSreeKrishna/images/main/images/personal/ps7.png?token=AO3RFNFOHVAULXT2V6BFETDAOEVJ2" className="card-img-bottom" alt="" />
                 <div className="content">
-                    <h5 className="title">#PHP</h5>
-                    <h5 className="title">#HTML</h5>
-                    <h5 className="title">#CSS</h5>
-                    <h5 className="title">#Javascript</h5>
+                    <h5 className="title php">#PHP</h5>
+                    <h5 className="title html">#HTML</h5>
+                    <h5 className="title css">#CSS</h5>
+                    <h5 className="title js">#Javascript</h5>
                 </div>
                 </div>
                 <div className="card-footer">
@@ -44,12 +44,12 @@ function Personal() {
                 <h3>FaceRecog Opencv2</h3>
                 </div>
                 <div className="card-body">
-                <img className="card-img-bottom" src="./images/personal/ps3.jpg" alt="" />
+                <img className="card-img-bottom" src="https://raw.githubusercontent.com/ChittojiMuraliSreeKrishna/images/main/images/personal/ps3.jpg?token=AO3RFNGKL6KBXUZEAHPCS43AOEVUS" alt="" />
                 <div className="content">
-                    <h5 className="title">#Python</h5>
-                    <h5 className="title">#CV2</h5>
-                    <h5 className="title">#Numpy</h5>
-                    <h5 className="title">#Pickle</h5>
+                    <h5 className="title python">#Python</h5>
+                    <h5 className="title cv2">#CV2</h5>
+                    <h5 className="title numpy">#Numpy</h5>
+                    <h5 className="title pickle">#Pickle</h5>
                 </div>
                 </div>
                 <div className="card-footer">
@@ -61,13 +61,12 @@ function Personal() {
                 <h3>Ecommerce Site Django</h3>
                 </div>
                 <div className="card-body">
-                <img className="card-img-bottom" src="./images/personal/ps2.png" alt="" />
+                <img className="card-img-bottom" src="https://raw.githubusercontent.com/ChittojiMuraliSreeKrishna/images/main/images/personal/ps2.png?token=AO3RFNGHGRQGUFIU4VFX4F3AOEVX2" alt="" />
                 <div className="content">
-                    <h5 className="title">#Python</h5>
-                    <h5 className="title">#Django</h5>
-                    <h5 className="title">#HTML</h5>
-                    <h5 className="title">#CSS</h5>
-                    <h5 className="title">#JavaScript</h5>
+                    <h5 className="title django">#Django</h5>
+                    <h5 className="title html">#HTML</h5>
+                    <h5 className="title css">#CSS</h5>
+                    <h5 className="title js">#JavaScript</h5>
                 </div>
                 </div>
                 <div className="card-footer">
@@ -79,11 +78,11 @@ function Personal() {
                 <h3>Todolist Vanilla-js</h3>
                 </div>
                 <div className="card-body">
-                <img className="card-img-bottom" src="./images/personal/ps5.png" alt="" />
+                <img className="card-img-bottom" src="https://raw.githubusercontent.com/ChittojiMuraliSreeKrishna/images/main/images/personal/ps5.png?token=AO3RFNEWWLLARLSIMLVVKP3AOEVZ6" alt="" />
                 <div className="content">
-                    <h5 className="title">#HTML</h5>
-                    <h5 className="title">#CSS</h5>
-                    <h5 className="title">#JavaScript</h5>
+                    <h5 className="title html">#HTML</h5>
+                    <h5 className="title css">#CSS</h5>
+                    <h5 className="title js">#JavaScript</h5>
                 </div>
                 </div>
                 <div className="card-footer">
@@ -96,11 +95,11 @@ function Personal() {
                 <h3>Arch Linux Installation</h3>
                 </div>
                 <div className="card-body">
-                <img className="card-img-bottom" src="./images/personal/ps1.png" alt="" />
+                <img className="card-img-bottom" src="https://raw.githubusercontent.com/ChittojiMuraliSreeKrishna/images/main/images/personal/ps1.png?token=AO3RFNH35MLOM5A2YJ32CUDAOEV3Y" alt="" />
                 <div className="content">
-                    <h5 className="title">#HTML</h5>
-                    <h5 className="title">#CSS</h5>
-                    <h5 className="title">#JavaScript</h5>  
+                    <h5 className="title html">#HTML</h5>
+                    <h5 className="title css">#CSS</h5>
+                    <h5 className="title js">#JavaScript</h5>  
                 </div>
                 </div>
                 <div className="card-footer">

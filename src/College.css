@@ -2,7 +2,7 @@
     color: var(--green);
     font-weight: var(--text-bold);
 }
-.project__title{
+.projects__title{
     color: var(--light);
     font-size: var(--fs-xl);
     text-align: center;
@@ -16,15 +16,9 @@
     background: transparent;
     position: relative;
 }
-.close{
-    color: var(--green);
-}
-.close:hover{
-    color: var(--light);
-}
 .codebtn{
-    background: var(--yellow);
-    color: var(--dark-green);
+    border: 1px solid var(--yellow);
+    color: var(--yellow);
     padding: 0.6rem;
     border-radius: 0.3rem;
 }
@@ -39,6 +33,7 @@
 }
 
 .codebtn:hover{
+    background: var(--yellow);
     color: var(--black);
     text-decoration: none;
     font-weight: var(--text-bold);
@@ -64,7 +59,8 @@
 }
 .card-body p{
     display: inline-block;
-    text-align: justify;
+    text-align: left;
+    font-size: var(--fs-sm);
     margin-bottom: 2rem;
+    display: inline;
 }
-

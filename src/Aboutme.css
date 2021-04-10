@@ -25,7 +25,7 @@
       transform: translateY(10px);
       border: 2px solid rgba(0, 0, 0, 0.3);
   }
-  .hat:after{
+  .hat::after{
       content: "";
       width: 150%;
       height: 5px;
@@ -43,7 +43,7 @@
       position: relative;
       z-index: 7;
   }
-  .toyhead:after{
+  .toyhead::after{
     content: "";
     height: 10px;
     width: 38px;
@@ -60,7 +60,7 @@
       position: absolute;
       top: 25px;
   } 
-  .eyes:before{
+  .eyes::before{
       content: "";
       position: absolute;
       width: 15px;
@@ -70,7 +70,7 @@
       top: 2.5px;
       left: 2.5px;
   }
-  .eyes:after{
+  .eyes::after{
       content: "";
       position: absolute;
       width: 3px;
@@ -80,7 +80,7 @@
       top: 4px;
       left: 4px;
   }
-  .eye-right:after{
+  .eye-right::after{
         left: 13px;
   }
   .eye-left{
@@ -101,7 +101,7 @@
       overflow: hidden;
       border-radius: 10px 10px 70px 70px;
   }
-  .mouth:before{
+  .mouth::before{
       content: "";
       height: 4px;
       width: 20px;
@@ -111,7 +111,7 @@
       left: 10px;
       border-radius: 0px 0px 50px 50px;
   }
-  .mouth:after{
+  .mouth::after{
       content: "";
       height: 6px;
       width: 20px;
@@ -139,6 +139,17 @@
       position: absolute;
       left: 45%;
   }
+  .buttons::before{
+      content: "";
+      height: 4px;
+      width: 4px;
+      background: var(--green);
+      border-radius: 50%;
+      position: absolute;
+      top: 2.5px;
+      left: 2.6px;
+
+  }
   .button1{
       margin: 1em 0;
   }
@@ -162,7 +173,7 @@
       font-weight: var(--text-bold);
   }
   .about__title strong{
-      color: var(--Color5);
+      color: var(--light);
   }
   .about__subtitle {
     background: var(--medium-green);
@@ -188,3 +199,36 @@
   .icons{
       width: 50px;
   }
+@media (min-width: 1000px){
+
+  .about-me__body{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-areas: 
+        "b a"
+        "c c";
+}
+.about-me__img{
+    grid-area: a;
+    position: relative;
+    top: -3.5rem;
+    left: -10rem;
+}
+.about__title{
+    position: relative;
+    top: 1.5rem;
+    left: -4rem;
+}
+.about-titles{
+    grid-area: b;
+    position: relative;
+    top: 3.3rem;
+    right: -4rem;
+}
+.details{
+    grid-area: c;
+    max-width: 700px;
+    position: relative;
+    left: 1rem;
+}
+}

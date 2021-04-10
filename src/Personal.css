@@ -1,5 +1,3 @@
-.Personal .card{
-}
 .Personal .projects__title{
     margin: 3rem;
 }
@@ -9,18 +7,16 @@
     color: var(--light-green);
 }
 .content{
-    display: flex;
+   display: flex;
 }
 .title{
     font-size: var(--fs-sm);
-    background-color: var(--black);
-    color: var(--light);
     padding: 0.5rem;
     margin: 0.5rem 0.3rem;
     font-weight: var(--text-bold);
-    border: 0.5px solid var(--medium-green);
     border-radius: 8px;
 }
+
 .personal-img{
     margin-top: 1rem;
     margin-left: 0.4rem;
@@ -33,13 +29,14 @@
     border: 0.5px solid var(--light-green);
 }
 .pagebtn{
-    background: var(--green);
-    color: var(--light);
+    border: 1px solid var(--green);
+    color: var(--green);
     padding: 0.6rem;
     border-radius: 0.3rem;
     margin: 0 .5rem;
 }
 .pagebtn:hover{
+    background: var(--green);
     color: var(--light);
     font-weight: var(--text-bold);
     text-decoration: none;
@@ -50,7 +47,11 @@
 .Personal .projects{
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+}
+@media (min-width: 1000px){
+    .Personal .projects{
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    }
 }
 .Personal .card img{
     height: 20rem;
@@ -59,4 +60,40 @@
     .Personal .card{
         margin-left: 1rem;
     }
+}
+.html{
+    border: 1px solid #e34f26;
+    color: #e34f26;
+}
+.css{
+    border: 1px solid #00ffff;
+    color: #00ffff;
+}
+.js{
+    border: 1px solid #f7df1e;
+    color: #f7df1e;
+}
+.python{
+    border: 1px solid #aaaaaa;
+    color: #aaaaaa;
+}
+.cv2{
+    border: 1px solid #fff;
+    color: #fff;
+}
+.django{
+    border: 1px solid #000;
+    color: #000;
+}
+.numpy{
+    border: 1px solid #4584b6;
+    color: #4584b6;
+}
+.pickle{
+    border: 1px solid #b0db64;
+    color: #b0db64;
+}
+.php{
+    border: 1px solid #009999;
+    color: #009999;
 }

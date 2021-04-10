@@ -97,6 +97,7 @@
 /* Contact Me Coffe */
 .contact__title{
     font-size: var(--fs-xl);
+    color: var(--light);
     text-align: center;
     margin-top: 4rem;
 }
@@ -119,19 +120,32 @@
 }
 .coffecup{
     width: 70px;
-    border-top: 90px solid var(--light-green);
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
+    height: 70px;
+    background: var(--light-green);
     margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.coffecup::after{
+    content: "";
+    width: 70px;
+    height: 15px;
+    background: repeating-linear-gradient(45deg, var(--medium-green), var(--black) 3px);
+    position: absolute;
+    left: 0px;
+    bottom: -15px;
+    border-radius: 0 0 5px 5px;
 }
 .coffe{
     width: 64px;
     position: relative;
-    left: -12px;
+    left: -1px;
+    bottom: -5.2rem;
     transform: translateY(-90px);
-    border-top: 40px solid var(--dark-green);
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
+    background: var(--dark-green);
+    width: 71px;
+    height: 35px;
 }
 .coffelogo{
     background: var(--green);
@@ -139,33 +153,161 @@
     height: 30px;
     border-radius: 50%;
     position: absolute;
-    top: -35px;
-    left: 9px;
+    top: 2px;
+    left: 18px;
+}
+.coffelogo::before{
+    content: "C";
+    color: var(--dark-green);
+    font-weight: var(--text-bold);
+    font-size: var(--fs-md);
+    position: relative;
+    top: -2px;
+    left: 0;
 }
 .coffecap{
     width: 80px;
     height: 20px;
-    background: var(--medium-green);
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    background: repeating-linear-gradient(90deg, var(--light-green), var(--dark-green) 3px);
     position: relative;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    top: -110px;
-    left: -20px;
+    border-radius: 5px 5px 3px 3px;
+    top: -20px;
+    left: -5px;
+    border: 1px solid var(--black);
+    border-bottom: 0;
 }
-.coffecap:before{
+.coffecap::before{
     content: '';
     height: 15px;
     width: 60px;
-    background: var(--medium-green);
+    background: repeating-linear-gradient(90deg, var(--light-green), var(--dark-green) 3px);
     position: absolute;
-    top: -15px;
+    top: -16px;
     right: 10px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px 5px 0 0;
+    border: 1px solid var(--black);
+    border-bottom: 0;
+}
+.coffecap::after{
+    content: "";
+    height: 8px;
+    width: 15px;
+    background: var(--green);
+    position: absolute;
+    top: -22px;
+    right: 15px;
+    border-radius: 9px 0 0 0;
 }
 .contact__details i{
     color: var(--green);
     font-weight: var(--text-bold);
+}
+@media (max-width: 1000px){
+.view{
+    background: linear-gradient(45deg,#000, #555, #000);
+    height: 120px;
+    width: 80px;
+    margin-top: 3rem;
+    margin-bottom: 1.2rem; 
+    border: 12px solid var(--medium-green);
+    border-left: 3px solid var(--medium-green);
+    border-right: 3px solid var(--medium-green);
+    border-radius: 8px;
+    position: relative;
+}
+.view::before{
+    content: "";
+    background: linear-gradient(var(--green), var(--light-green), var(--green));
+    height: 12px;
+    width: 15px;
+    position: absolute;
+    bottom: -12px;
+    left: 1.8rem;
+    border: 2px solid var(--black);
+    border-radius: 5px;
+}
+.view::after{
+    content: "nokia";
+    font-weight: var(--text-normal);
+    position: absolute;
+    font-size: 10px;
+    top: -13px;
+    right: 0;
+}
+.view-text::after{
+    content: "mobile";
+    color: var(--white);
+    font-weight: var(--text-bold);
+    font-family: 'Overlock', Arial, Helvetica, sans-serif;
+    position: relative;
+    top: 40px;
+    right: 0;
+}
+.view-text::before{
+    content: "";
+    background: var(--light-green);
+    width: 14px;
+    height: 5px;
+    position: absolute;
+    top: -7px;
+    left: 41%;
+    border: 2px solid var(--black);
+    border-radius: 5px;
+}
+}
+@media (min-width: 1000px){
+    .view{
+        background: linear-gradient(145deg,#000, #555, #000);
+        width: 150px;
+        height: 100px;
+        border: 5px solid var(--medium-green);
+        border-radius: 8px;
+        margin-top: 3rem;
+        margin-bottom: 1.8rem; 
+        position: relative;
+        z-index: 2;
+    }
+    .view::before{
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        right: 5px;
+        background: var(--light-green);
+        width: 8px;
+        height: 5px;
+        border: 1px solid var(--black);
+        border-radius: 5px;
+    }
+    .view::after{
+        content: "dell";
+        background: var(--medium-green);
+        font-size: 10px;
+        width: 70px;
+        height: 2px;
+        position: absolute;
+        bottom: -31px;
+        left: 35px;
+        border-bottom: 14px solid var(--medium-green);
+        border-radius: 8px 0 8px 0;
+    }
+    .view-text::after{
+        content: "";
+        border: 3px solid var(--green);
+        width: 50px;
+        height: 20px;
+        border-bottom: 0;
+        border-top: 0;
+        position: absolute;
+        bottom: -25px;
+        right: 45px;
+    }
+    .view-text::before{
+        content: "desktop";
+        color: var(--white);
+        font-weight: var(--text-bold);
+        position: relative;
+        font-family: 'Overlock', Arial, Helvetica, sans-serif;
+        top: 30px;
+        right: 3px;
+    }
 }

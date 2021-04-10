@@ -4,6 +4,9 @@ function Moreprojects() {
   return (
     <div className="Moreprojects">
       <h2 className="moreProj-title container" id="moreProj">MoreProjects</h2>
+      <div className="view container">
+        <p className="view-text"></p>
+      </div>
             <p className="moreProj-text container">Few more projects & trying out few youtube challenges</p>
     <div className="moreProj container">
         <div className="moreProj-head">
