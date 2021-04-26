@@ -21,31 +21,31 @@ function Moreprojects() {
         </div>
         <div className="moreProj-body">
           <a
-            href="https://github.com/ChittojiMuraliSreeKrishna/Python_codes.git"
+            href="https://github.com/ChittojiMuraliSreeKrishna/PythonCodes"
             className="moreProj-card"
           >
             <p>Python-Codes</p>
           </a>
           <a
-            href="https://github.com/ChittojiMuraliSreeKrishna/Python_codes/tree/master/Tkinter"
+            href="https://github.com/ChittojiMuraliSreeKrishna/TkinterPython"
             className="moreProj-card"
           >
-            <p>Python/Tkinter-Challenge</p>
+            <p>Tkinter-Challenge</p>
           </a>
           <a
-            href="https://github.com/ChittojiMuraliSreeKrishna/Front_End_codes/tree/master/10-Projects"
+            href="https://github.com/ChittojiMuraliSreeKrishna/10FrontEndChallenge"
             className="moreProj-card"
           >
             <p>Frontend-Challenge</p>
           </a>
           <a
-            href="https://github.com/ChittojiMuraliSreeKrishna/Front_End_codes/tree/master/Vannila_Javascript"
+            href="https://github.com/ChittojiMuraliSreeKrishna/VanillaJS"
             className="moreProj-card"
           >
             <p>Vanilla-Javascript</p>
           </a>
           <a
-            href="https://github.com/ChittojiMuraliSreeKrishna/Front_End_codes/tree/master/Vannila_Javascript"
+            href="https://github.com/ChittojiMuraliSreeKrishna/HtmlCss"
             className="moreProj-card"
           >
             <p>HtmlCss/Basic</p>
