@@ -1,9 +1,10 @@
-import "./Header.css";
+import React from 'react'
+import "../Css/Header.css";
 import { FaLinkedin, FaGithub, FaCodepen } from "react-icons/fa";
 
 const Footer = () => {
-  return (
-    <footer className="Footer">
+    return (
+        <footer className="Footer">
       <nav className="nav">
         <ul className="nav__list">
           <li>
@@ -24,7 +25,7 @@ const Footer = () => {
         </ul>
       </nav>
     </footer>
-  );
-};
+    )
+}
 
-export default Footer;
+export default Footer

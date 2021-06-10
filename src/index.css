@@ -1,55 +1,48 @@
-@import url(https://fonts.googleapis.com/css?family=Overlock:400,400i,700|Oleo+Script);
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
-html{
-    /*Hsl Values*/
-    --black: #3c3c3c;
-    --dark-green: #164a41;
-    --medium-green: #4d774e;
-    --light-green: #9dc88d;
-    --yellow: #f1b24a;
-    --light: #f1f1f1;
+html {
+  --colorWhite: #ffffff;
+  --colorBlack: #000000;
+  --colorGreen: #97a859;
+  --colorCharcoal: #253341;
+  --colorSlateGrey: #2f4f4f;
+  /*Font Size*/
+  --fs-xl: 2.5rem;
+  --fs-lg: 2rem;
+  --fs-md: 1.5rem;
+  --fs-sm: 1rem;
+}
 
-    /*Font Size*/
-    --fs-xl: 2.5rem;
-    --fs-lg: 2.0rem;
+@media (min-width: 1000px) {
+  html {
+    --fs-xl: 3.5rem;
+    --fs-lg: 3rem;
     --fs-md: 1.5rem;
-    --fs-sm: 1rem;
-    
-    /*Font Weight*/
-    --text-normal: 500;
-    --text-bold: 900;
-}
-@media (min-width: 1000px){
-    html{
-        --fs-xl: 3.5rem;
-        --fs-lg: 3.0rem;
-        --fs-md: 1.5rem;
-        --fs-sm: 1.125rem;
-    }
+    --fs-sm: 1.125rem;
+  }
 }
 
-/*Global Styling*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behaviour: smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-img{
-    width: 100%;
-    display: block;
+
+img {
+  width: 100%;
 }
-body{
-    background: var(--dark-green);
-    color: var(--light);
-    font-family: 'Roboto', sans-serif;
+
+a {
+  text-decoration: none;
 }
-h1, h2,h3,h4,h5{
-    font-family: 'Overlock', Arial, Helvetica, sans-serif;
+
+ul {
+  list-style: none;
 }
-a{
-    text-decoration: none;
-}
-ul{
-    list-style: none;
+
+body {
+  background: linear-gradient(
+    to left,
+    var(--colorSlateGrey) 50%,
+    var(--colorCharcoal) 50%
+  );
+  color: white;
 }

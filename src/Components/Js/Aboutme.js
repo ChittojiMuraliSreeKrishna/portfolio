@@ -1,8 +1,14 @@
-import "./Aboutme.css";
+import React from 'react'
+import "../Css/Aboutme.css"
 
-function Aboutme() {
-  return (
-    <div className="Aboutme">
+import HTML from "../Images/icons/html.png"
+import CSS from "../Images/icons/css.png"
+import JavaScript from "../Images/icons/javascript.png"
+import Python from "../Images/icons/python.png"
+
+const Aboutme = () => {
+    return (
+<div className="Aboutme">
       <h2 className="about-me__title text-center" id="about">
         About Me
       </h2>
@@ -42,22 +48,22 @@ function Aboutme() {
             <h4>Things in Which i have grip on :</h4>
             <div className="languages">
               <img
-                src="https://raw.githubusercontent.com/ChittojiMuraliSreeKrishna/images/main/images/icons/html.png?token=AO3RFNBHUFV5LR4CNCCDFMTAOEW3E"
+                src={HTML}
                 className="icons"
                 alt=""
               />
               <img
-                src="https://raw.githubusercontent.com/ChittojiMuraliSreeKrishna/images/main/images/icons/css.png?token=AO3RFNFJHTPZ6PG2F3HRMMTAOEW42"
+              src={CSS}
                 className="icons"
                 alt=""
               />
               <img
-                src="https://raw.githubusercontent.com/ChittojiMuraliSreeKrishna/images/main/images/icons/javascript.png?token=AO3RFNCD325UI2ZE3EHHTJTAOEW6C"
+              src={JavaScript}
                 className="icons"
                 alt=""
               />
               <img
-                src="https://raw.githubusercontent.com/ChittojiMuraliSreeKrishna/images/main/images/icons/python.png?token=AO3RFNAFIPK5YSBD2JADOKDAOEW7W"
+              src={Python}
                 className="icons"
                 alt=""
               />
@@ -66,7 +72,7 @@ function Aboutme() {
         </section>
       </div>
     </div>
-  );
+    )
 }
 
-export default Aboutme;
+export default Aboutme

@@ -1,0 +1,21 @@
+.certificateHeading {
+  font-size: var(--fs-xl);
+  font-weight: 400;
+  color: var(--colorWhite);
+  margin: 3rem;
+  text-align: center;
+  text-shadow: 2px 2px var(--colorBlack);
+}
+.certificateHeading::first-letter {
+  color: var(--colorGreen);
+  font-weight: 700;
+}
+.certificates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 0 2rem;
+}
+
+.certificateImages {
+  height: 15rem;
+}
