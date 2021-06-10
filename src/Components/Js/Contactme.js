@@ -1,12 +1,24 @@
 import React from 'react'
 import "../Css/Contactme.css"
+import { Typography, makeStyles } from '@material-ui/core'
+
+const useStyles = makeStyles((theme) => ({
+  heading: {
+      color: "tomato",
+      padding: "3rem 0",
+      textTransform: "uppercase",
+      textShadow: "2px 2px black",
+  },
+}))
+
 
 const Contactme = () => {
+  const classes = useStyles()
     return (
         <div className="container">
-            <h2 className="contactHeading">
-                Contact Me
-            </h2>
+            <Typography variant="h4" align="center" className={classes.heading}>
+                Contact me
+            </Typography>
             <div className="contact__body">
           <div className="coffecup">
             <div className="coffecap"></div>

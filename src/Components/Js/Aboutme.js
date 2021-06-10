@@ -1,18 +1,29 @@
 import React from 'react'
 import "../Css/Aboutme.css"
+import { Typography, makeStyles } from '@material-ui/core'
 
 import HTML from "../Images/icons/html.png"
 import CSS from "../Images/icons/css.png"
 import JavaScript from "../Images/icons/javascript.png"
 import Python from "../Images/icons/python.png"
 
+const useStyles = makeStyles((theme) => ({
+  heading: {
+      color: "tomato",
+      padding: "3rem 0",
+      textTransform: "uppercase",
+      textShadow: "2px 2px black",
+  },
+}))
+
 const Aboutme = () => {
+  const classes = useStyles()
     return (
 <div className="Aboutme">
-      <h2 className="about-me__title text-center" id="about">
-        About Me
-      </h2>
-      <div className="container mt-5">
+            <Typography variant="h4" align="center" className={classes.heading} id="about">
+                About me
+            </Typography>
+      <div className="">
         <section className="about-me">
           <div className="about-me__body">
             <div className="about-me__img shadow">

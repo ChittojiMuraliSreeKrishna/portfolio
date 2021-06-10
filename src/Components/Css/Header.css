@@ -32,7 +32,7 @@
   }
   .nav__list li a:hover,
   .nav__list li a:active {
-    color: var(--colorGreen);
+    color: var(--colorBlack);
   }
   .Footer .nav__list li {
     transform: translateY(5px);

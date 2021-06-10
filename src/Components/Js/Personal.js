@@ -23,17 +23,18 @@ const useStyles = makeStyles((theme) => ({
         height: "5rem",
     },
     heading: {
-        textAlign: "center",
-        marginTop: "3rem",
-        fontWeight: "400",
+        color: "tomato",
+        padding: "3rem 0",
+        textTransform: "uppercase",
         textShadow: "2px 2px black",
-        "&::first-letter": {
-            fontWeight: "700",
-            color: "#97a859",
-        },
     },
     card: {
         margin: 10,
+    },
+    button: {
+        "&:hover":{
+            color: "#fff",
+        },
     },
 }))
 
@@ -41,7 +42,9 @@ const Personal = ({projects}) => {
     const classes = useStyles();
     return (
         <Box component="div" className={classes.mainContainer}>
-            <h2 id="personal" className={classes.heading}>Personal Projects</h2>
+            <Typography variant="h4" align="center" className={classes.heading} id="personal">
+                Personal Projects
+            </Typography>
             <Grid container justify="center">
             {projects.map((project, i) => (
                 <Grid item xs={12} sm={9} md={5} key={i}> 
@@ -63,7 +66,8 @@ const Personal = ({projects}) => {
                                     <Button 
                                     color="primary" 
                                     variant="contained" 
-                                    link={project.link}
+                                    href={project.link}
+                                    className={classes.button}
                                     startIcon={<CodeIcon />}>
                                         Code
                                     </Button>

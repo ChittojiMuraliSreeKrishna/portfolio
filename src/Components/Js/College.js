@@ -98,8 +98,8 @@ const useStyles = makeStyles((theme) => ({
         color: "tomato",
         padding: "3rem 0",
         textTransform: "uppercase",
-        textShadow: "2px 2px var(--colorBlack)",
-      },
+        textShadow: "2px 2px black",
+      }, 
       subHeading: {
         color: "#fff",
         paddingBottom: 10,
@@ -110,7 +110,10 @@ const useStyles = makeStyles((theme) => ({
       },
       button: {
         margin: 10,
-      }
+        "&:hover": {
+          color: "#fff",
+        },
+      },
 }))
 
 const College = () => {
@@ -143,7 +146,7 @@ const College = () => {
             color="secondary"
             className={classes.button}
             startIcon={<CodeICon />}
-            link="https://github.com/ChittojiMuraliSreeKrishna/collegeProjects/tree/main/summerinternship"
+            href="https://github.com/ChittojiMuraliSreeKrishna/collegeProjects/tree/main/summerinternship"
             >
               <Typography variant="button">
                 Code
