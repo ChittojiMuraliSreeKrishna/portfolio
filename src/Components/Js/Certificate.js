@@ -15,7 +15,7 @@ const Certificate = ({certificates}) => {
     const classes = useStyles()
     return (
         <div>
-            <Typography variant="h4" align="center" className={classes.heading} id="certiificate">
+            <Typography variant="h4" align="center" className={classes.heading} id="certificates">
                 Certificates
             </Typography>
             <div className="certificates">
