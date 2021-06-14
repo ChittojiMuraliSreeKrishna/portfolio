@@ -36,18 +36,25 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    color: "#fbf1c7",
   },
   title: {
     flexGrow: 1,
     color: "#076678",
     fontWeight: 600,
   },
+  menu: {
+    "& .MuiPaper-root": {
+      background: "#3c3636",
+    },
+  },
   button: {
     color: "#fbf1c7",
     "&:hover": {
-      color: "#fbf1c7",
-    },
+      color: "#ebdbb2",
+      background: "#3c3636",
   },
+},
 }));
 
 function HideOnScroll(props) {
@@ -70,6 +77,9 @@ const Header = (props) => {
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };
+  const handleClose = () => {
+    setAnchorEl(null);
+  }
   return (
     <div className={classes.root}>
       <HideOnScroll {...props}>
@@ -96,13 +106,15 @@ const Header = (props) => {
                     <MenuIcon />
                   </IconButton>
                   <Menu
-                    id="menu-appbar"
+                    id="fade-menu"
+                    className={classes.menu}
                     anchorEl={anchorEl}
                     anchorOrigin={{
                       vertical: "top",
                       horizontal: "right",
                     }}
                     KeepMounted
+                    onClose={handleClose}
                     transformOrigin={{
                       vertical: "top",
                       horizontal: "right",
@@ -113,10 +125,10 @@ const Header = (props) => {
                       onClick={() => setAnchorEl(null)}
                       className={classes.button}
                       component={Link}
-                      to="/"
+                      to="/portfolio/"
                     >
                       <ListItemIcon>
-                        <HomeIcon />
+                        <HomeIcon className={classes.button} />
                       </ListItemIcon>
                       <Typography variant="h6"> Home</Typography>
                     </MenuItem>
@@ -124,10 +136,10 @@ const Header = (props) => {
                       onClick={() => setAnchorEl(null)}
                       className={classes.button}
                       component={Link}
-                      to="/College"
+                      to="/portfolio/College"
                     >
                       <ListItemIcon>
-                        <SchoolIcon />
+                        <SchoolIcon className={classes.button} />
                       </ListItemIcon>
                       <Typography variant="h6"> College </Typography>
                     </MenuItem>
@@ -135,10 +147,10 @@ const Header = (props) => {
                       onClick={() => setAnchorEl(null)}
                       className={classes.button}
                       component={Link}
-                      to="/About"
+                      to="/portfolio/About"
                     >
                       <ListItemIcon>
-                        <PersonIcon />
+                        <PersonIcon className={classes.button} />
                       </ListItemIcon>
                       <Typography variant="h6"> About</Typography>
                     </MenuItem>
@@ -146,10 +158,10 @@ const Header = (props) => {
                       onClick={() => setAnchorEl(null)}
                       className={classes.button}
                       component={Link}
-                      to="/Personal"
+                      to="/portfolio/Personal"
                     >
                       <ListItemIcon>
-                        <BookmarksIcon />
+                        <BookmarksIcon className={classes.button} />
                       </ListItemIcon>
                       <Typography variant="h6"> Personal </Typography>
                     </MenuItem>
@@ -157,19 +169,19 @@ const Header = (props) => {
                 </>
               ) : (
                 <div style={{ marginRight: "2rem" }}>
-                  <Button variant="text" color="default" href="/" className={classes.button}>
+                  <Button variant="text" color="default" href="/portfolio/" className={classes.button}>
                     <HomeIcon />
                     Home
                   </Button>
-                  <Button variant="text" color="default" href="/College" className={classes.button}>
+                  <Button variant="text" color="default" href="/portfolio/College" className={classes.button}>
                     <SchoolIcon />
                     College
                   </Button>
-                  <Button variant="text" color="default" href="/About" className={classes.button}>
+                  <Button variant="text" color="default" href="/portfolio/About" className={classes.button}>
                     <PersonIcon />
                     About
                   </Button>
-                  <Button variant="text" color="default" href="/Personal" className={classes.button}>
+                  <Button variant="text" color="default" href="/portfolio/Personal" className={classes.button}>
                     <BookmarksIcon />
                     Personal
                   </Button>
@@ -178,10 +190,10 @@ const Header = (props) => {
             </Toolbar>
           </AppBar>
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/College" component={College} />
-            <Route exact path="/About" component={About} />
-            <Route exact path="/Personal" component={Personal} />
+            <Route exact path="/portfolio/" component={Home} />
+            <Route exact path="/portfolio/College" component={College} />
+            <Route exact path="/portfolio/About" component={About} />
+            <Route exact path="/portfolio/Personal" component={Personal} />
           </Switch>
         </BrowserRouter>
       </HideOnScroll>
