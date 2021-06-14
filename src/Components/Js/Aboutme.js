@@ -4,8 +4,7 @@ import { Typography,
   Box, Card, 
   CardContent, 
   CardActions,
-  CardMedia,
-  CardActionArea } from '@material-ui/core'
+  CardMedia } from '@material-ui/core'
 
   import myBackground from "../Images/mine2.jpg"
   import aboutImg from "../Images/mine3.jpg"
@@ -14,17 +13,26 @@ import { Typography,
   import JavaScript from "../Images/icons/javascript.png"
   import Python from "../Images/icons/python.png"
 
+  import "../Css/Contactme.css"
+
+  import { FaLinkedin, 
+    FaGithub, 
+    FaCodepen,
+    FaTwitter,
+    FaDev, } from "react-icons/fa";
+
+
 const useStyles = makeStyles((theme) => ({
   heading: {
-      color: "tomato",
-      padding: "3rem 0",
-      textTransform: "uppercase",
-      textShadow: "2px 2px black",
+    color: "#af3a03",
+    padding: "3rem 0",
+    fontWeight: 600,
+    textTransform: "uppercase",
   },
   card: {
     maxWidth: "600px",
-    background: "white",
-    color: "black",
+    background: "#363836",
+    color: "#fbf1c7",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -37,12 +45,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   icons: {
-    width: "50px",
-  },
-  languages: {
-    display: "flex",
-    justifyContent: "space-evenly",
-    alignItems: "center",
+    width: "30px",
   },
   boxStyling: {
     display: "grid",
@@ -56,19 +59,19 @@ const useStyles = makeStyles((theme) => ({
   width: "12rem",
   height: "12rem",
   borderRadius: "50%",
-  border: "solid 0.5rem #fff",
+  border: "solid 0.5rem #282828",
   overflow: "hidden",
   marginTop: "-6rem",
   alignSelf: "center",
   },
   aboutImg: {
     width: "100%",
-    height: "auto",
+    height: "100%",
     borderRadius: "50%",
     alignSelf: "center",
   },
   subHeading: {
-    background: "#97a859",
+    background: "#458588",
     padding: "0 2rem",
     margin: "1rem 2rem",
     borderRadius: "15px",
@@ -76,8 +79,30 @@ const useStyles = makeStyles((theme) => ({
   },
   languagesTitle:{
     textDecoration: "underline",
-    color: "gray",
-  }
+    color: "#a89984",
+  },
+  languages: {
+    display: "flex",
+    width: "100%",
+    justifyContent: "center",
+    gap: "20px", 
+    alignItems: "center",
+    margin: "1rem",
+  },
+  links: {
+    display: "flex",
+    width: "100%",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    background: "#282828",
+  },
+  link:{
+    color: "#458588",
+    fontSize: "1.5rem",
+    "&:hover":{
+      color: "#fbf1c7",
+    },
+  },
 }))
 
 
@@ -123,8 +148,7 @@ const Aboutme = () => {
     <Typography variant="body2" align="center" className={classes.languagesTitle}>
       Things In which i have grip on: 
     </Typography>
-    <CardActionArea>
-    <CardActions className={classes.languages}>
+    <Box className={classes.languages}>
     <img
       src={HTML}
       className={classes.icons}
@@ -145,10 +169,53 @@ const Aboutme = () => {
       className={classes.icons}
       alt=""
     />
+    </Box>
+    <Typography variant="Heading" align="center" className={classes.languagesTitle}>
+        Links:
+    </Typography>
+    <CardActions className={classes.links}>
+        <a href="https://www.linkedin.com/in/murali-sree-krishna-chittoji-06a353170/" 
+        className={classes.link}>
+          <FaLinkedin />
+        </a>
+        <a href="https://github.com/ChittojiMuraliSreeKrishna"
+        className={classes.link}>
+          <FaGithub />
+        </a>
+        <a href="https://codepen.io/murali-sree-krishna" 
+        className={classes.link}>
+          <FaCodepen />
+        </a>
+        <a href="https://twitter.com/CmuraliSree"
+        className={classes.link}>
+          <FaTwitter/>
+        </a>
+        <a href="https://dev.to/cmuralisree"
+        className={classes.link}>
+          <FaDev/>
+        </a>
     </CardActions>
-    </CardActionArea>
     </Card>
     </Box>
+    <Typography variant="h4" align="center" className={classes.heading}>
+                Contact me
+            </Typography>
+            <div className="contact__body">
+          <div className="coffecup">
+            <div className="coffecap"></div>
+            <div className="coffe">
+              <div className="coffelogo"></div>
+            </div>
+          </div>
+          <div className="contact__details">
+            <p className="phoneno">
+            <b>+91</b> 9972577728
+            </p>
+            <p className="email">
+              <b>@</b> cmkrishna97@gmail.com
+            </p>
+          </div>
+        </div>
     </Box>
   )
 }

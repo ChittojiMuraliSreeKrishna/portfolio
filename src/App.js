@@ -1,30 +1,25 @@
 import "@fontsource/roboto"
-import Body from "./Components/Js/Body";
-import Footer from "./Components/Js/Footer";
 import Header from "./Components/Js/Header";
-import {ThemeProvider, createMuiTheme} from "@material-ui/core/styles"
-import { green, red } from "@material-ui/core/colors"
+import {ThemeProvider, createMuiTheme, Container} from "@material-ui/core/"
 
 const theme = createMuiTheme({
   palette: {
-    type: "dark",
+    type: "light",
     primary: {
-      main: green[600]
+      main: "#282828",
     },
     secondary: {
-      main: red[400]
-    }
-  }
+      main: "#458588",
+    },
+  },
 })
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-    <div className="App">
+      <Container style={{marginTop: "4rem"}}>
       <Header />
-     <Body />
-     <Footer />
-    </div>
+      </Container>
     </ThemeProvider>
   );
 }

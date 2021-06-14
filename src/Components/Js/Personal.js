@@ -9,6 +9,23 @@ import {
     Typography
 } from "@material-ui/core/";
 import CodeIcon from '@material-ui/icons/Code';
+import { useState } from 'react'
+
+import "../Css/Certificate.css"
+
+// Personal Projects
+import project1 from "../Images/personal/ps1.png"
+import project2 from "../Images/personal/ps2.png"
+import project3 from "../Images/personal/ps3.jpg"
+import project5 from "../Images/personal/ps5.png"
+import project6 from "../Images/personal/ps6.png"
+import project7 from "../Images/personal/ps7.png"
+
+// Certificates
+import certificate1 from "../Images/certificates/work1.png"
+import certificate2 from "../Images/certificates/work2.png"
+import certificate3 from "../Images/certificates/work3.png"
+import certificate4 from "../Images/certificates/work4.png"
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
@@ -17,27 +34,80 @@ const useStyles = makeStyles((theme) => ({
     cardContainer: {
         maxHeight: 345,
         margin: 10,
+        background: "#363736",
     },
     cardBody: {
         height: "5rem",
+        color: "#fbf1c7",
     },
     heading: {
-        color: "tomato",
-        padding: "3rem 0",
-        textTransform: "uppercase",
-        textShadow: "2px 2px black",
+    color: "#af3a03",
+    padding: "3rem 0",
+    fontWeight: 600,
+    textTransform: "uppercase",
     },
     card: {
         margin: 10,
     },
     button: {
+        color: "#fbf1c7",
         "&:hover":{
-            color: "#fff",
+            color: "#fbf1c7",
         },
     },
 }))
 
-const Personal = ({projects}) => {
+const Personal = () => {
+    const [certificates] = useState([
+        {
+            id: 1,
+            img: certificate1,
+        },
+        {
+            id: 2,
+            img: certificate2,
+        },
+        {
+            id: 3,
+            img: certificate3,
+        },
+        {
+            id: 4,
+            img: certificate4,
+        },
+    ])
+    const [projects] = useState([
+        {
+            heading: 'Social Media PHP',
+            img: project6,
+            link: "https://github.com/ChittojiMuraliSreeKrishna/Php/tree/main/Socialmedia",
+        },
+        {
+            heading: 'Todo List PHP',
+            img: project7,
+            link: "https://github.com/ChittojiMuraliSreeKrishna/Php/tree/main/TodoList",
+        },
+        {
+            heading: 'Facerecog Opencv2',
+            img: project3,
+            link: "https://github.com/ChittojiMuraliSreeKrishna/Python_codes/tree/master/Opencv",
+        },
+        {
+            heading: 'Ecommerce Site Django',
+            img: project2,
+            link: "https://github.com/ChittojiMuraliSreeKrishna/Django_Ecommerce",
+        },
+        {
+            heading: 'Todolist Vanilla-js',
+            img: project5,
+            link: "https://github.com/ChittojiMuraliSreeKrishna/TodoList",
+        },
+        {
+            heading: 'Arch Linux installation',
+            img: project1,
+            link: "https://github.com/ChittojiMuraliSreeKrishna/Arch-Linux-Installation",
+        }
+    ])
     const classes = useStyles();
     return (
         <Box component="div" className={classes.mainContainer}>
@@ -46,7 +116,7 @@ const Personal = ({projects}) => {
             </Typography>
             <Grid container justify="center">
             {projects.map((project, i) => (
-                <Grid item xs={12} sm={9} md={5} key={i}> 
+                <Grid item xs={10} sm={6} md={4} key={i}> 
                     <Card className={classes.cardContainer}>
                             <CardMedia
                             component="img"
@@ -61,7 +131,7 @@ const Personal = ({projects}) => {
                             </CardContent>
                                 <CardActions>
                                     <Button 
-                                    color="primary" 
+                                    color="secondary" 
                                     variant="contained" 
                                     href={project.link}
                                     className={classes.button}
@@ -73,6 +143,16 @@ const Personal = ({projects}) => {
                 </Grid>
             ))}
             </Grid>
+            <Typography variant="h4" align="center" className={classes.heading} id="certificates">
+                Certificates
+            </Typography>
+            <div className="certificates">
+            {certificates.map((certificate) => (
+                            <div className="certificate-items" key={certificate.id} >
+                                <img src={certificate.img} alt="" className="certificateImages" />
+                            </div>
+            ))}
+            </div>
         </Box>
     )
 }
