@@ -7,6 +7,7 @@ import {
   Typography,
   useMediaQuery,
   Button,
+  RaisedButton,
   useScrollTrigger,
   Slide,
   Menu,
@@ -169,19 +170,39 @@ const Header = (props) => {
                 </>
               ) : (
                 <div style={{ marginRight: "2rem" }}>
-                  <Button variant="text" color="default" href={process.env.PUBLIC_URL + "/"} className={classes.button}>
+                  <Button variant="text" 
+                  onClick={() => setAnchorEl(null)} 
+                  color="default"
+                  component={Link}
+                  to={process.env.PUBLIC_URL + "/"} 
+                  className={classes.button}>
                     <HomeIcon />
                     Home
                   </Button>
-                  <Button variant="text" color="default" href={process.env.PUBLIC_URL + "/College"} className={classes.button}>
+                  <Button variant="text" 
+                  onClick={() => setAnchorEl(null)} 
+                  color="default"
+                  component={Link}
+                  to={process.env.PUBLIC_URL + "/College"} 
+                  className={classes.button}>
                     <SchoolIcon />
                     College
                   </Button>
-                  <Button variant="text" color="default" href={process.env.PUBLIC_URL + "/About"} className={classes.button}>
+                  <Button variant="text" 
+                  onClick={() => setAnchorEl(null)} 
+                  color="default"
+                  component={Link}
+                  to={process.env.PUBLIC_URL + "/About"} 
+                  className={classes.button}>
                     <PersonIcon />
                     About
                   </Button>
-                  <Button variant="text" color="default" href={process.env.PUBLIC_URL + "/Personal"} className={classes.button}>
+                  <Button variant="text" 
+                  onClick={() => setAnchorEl(null)} 
+                  color="default"
+                  component={Link}
+                  to={process.env.PUBLIC_URL + "/Personal"} 
+                  className={classes.button}>
                     <BookmarksIcon />
                     Personal
                   </Button>
