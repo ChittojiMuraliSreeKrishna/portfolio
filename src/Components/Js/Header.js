@@ -7,7 +7,6 @@ import {
   Typography,
   useMediaQuery,
   Button,
-  RaisedButton,
   useScrollTrigger,
   Slide,
   Menu,
@@ -30,7 +29,6 @@ import College from "./College";
 import About from "./Aboutme";
 import Personal from "./Personal";
 
-// LOCAL-STYLING
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -44,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#076678",
     fontWeight: 600,
   },
-  menu: {
+  menu: { 
     "& .MuiPaper-root": {
       background: "#3c3636",
     },

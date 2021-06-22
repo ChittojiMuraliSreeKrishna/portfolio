@@ -2,9 +2,16 @@ import React from 'react'
 import { Typography, 
   makeStyles, 
   Box, Card, 
-  CardContent, 
+  Grid, Button,
+  CardContent,
+  useMediaQuery, 
   CardActions,
   CardMedia } from '@material-ui/core'
+  import { Link } from "react-router-dom";
+  import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import SchoolIcon from "@material-ui/icons/School";
+import BookmarksIcon from "@material-ui/icons/Bookmarks";
 
   import myBackground from "../Images/mine2.jpg"
   import aboutImg from "../Images/mine3.jpg"
@@ -107,6 +114,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Aboutme = () => {
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   const classes = useStyles();
   return (
     <Box className={classes.boxStyling}>
@@ -216,6 +224,38 @@ const Aboutme = () => {
             </p>
           </div>
         </div>
+        {isMobile ? (
+        <Grid container justify="space-between">
+          <Grid item>
+            <Button
+              variant="contained"
+              color="primary"
+              component={Link}
+              to={process.env.PUBLIC_URL +  "/College"}
+              style={{ margin: "15px 0"}}
+            >
+              <ChevronLeftIcon />
+              <Typography variant="button">College</Typography>
+              <SchoolIcon style={{ marginLeft: 15 }} />
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button
+              variant="contained"
+              color="primary"
+              component={Link}
+              to={process.env.PUBLIC_URL + "/Personal"}
+              style={{ margin: "15px 0"}}
+            >
+              <BookmarksIcon style={{ marginRight: 15 }} />
+              <Typography variant="button">Personal</Typography>
+              <ChevronRightIcon />
+            </Button>
+          </Grid>
+        </Grid>
+      ) : (
+        <></>
+      )}
     </Box>
   )
 }

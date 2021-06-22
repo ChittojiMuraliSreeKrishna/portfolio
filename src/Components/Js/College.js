@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Typography, Box, Button } from '@material-ui/core'
+import { Typography, Box,  Grid,
+  useMediaQuery, Button } from '@material-ui/core'
 import CodeICon from "@material-ui/icons/Code"
+import { Link } from "react-router-dom";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import HomeIcon from "@material-ui/icons/Home";
+import PersonIcon from "@material-ui/icons/Person";
 
-import college1 from "../Images/college/cs5.png"
-import college2 from "../Images/college/cs9.jpg"
+import summerintern1 from "../Images/college/cs5.png"
+import summerintern2 from "../Images/college/cs1.png"
+import summerintern3 from "../Images/college/cs2.png"
+import summerintern4 from "../Images/college/cs3.png"
+import summerintern5 from "../Images/college/cs4.png"
+import summerintern6 from "../Images/college/cs6.png"
+
+import miniproject1 from "../Images/college/cs9.jpg"
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
@@ -117,10 +129,63 @@ const useStyles = makeStyles((theme) => ({
           color: "#fbf1c7",
         },
       },
+      iconButton: {
+        background: "#fff",
+        borderRadius: "50%",
+        border: "2px solid #282828",
+        color: "#282828",
+        fontSize: "1.8rem",
+        margin: "0.2rem"
+      },
+      imageCarousel: {
+        position: "relative",
+      },
+      carouselButtons: {
+        position: "absolute",
+        bottom: "10px",
+        right: "20px",
+      },
 }))
 
+const summerinternship = [
+  {
+    image: summerintern1,
+  },
+  {
+    image: summerintern2,
+  },
+  {
+    image: summerintern3,
+  },
+  {
+    image: summerintern4,
+  },
+  {
+    image: summerintern5,
+  },
+  {
+    image: summerintern6,
+  },
+]
+
 const College = () => {
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
     const classes = useStyles()
+    const [current, setCurrent] = useState(0);
+    const length = summerinternship.length;
+
+    const nextSlide = () => {
+      setCurrent(current === length -1 ? 0 : current + 1);
+    }
+
+    const prevSlide = () => {
+      setCurrent(current === 0 ? length - 1 : current - 1);
+    }
+
+    if (!Array.isArray(summerinternship) || summerinternship.Box <= 0) {
+      return null;
+    }
+
     return (
         <Box className={classes.mainContainer}>
             <Typography variant="h4" align="center" className={classes.heading} id="college">
@@ -143,7 +208,21 @@ const College = () => {
             users send the messages by logging inWhile admins have the right 
             to play or Delete messages
             </Typography>
-            <img src={college1} alt="" />
+            <Box className={classes.imageCarousel} >
+              <Box className={classes.carouselButtons}>
+              <ChevronLeftIcon  onClick={prevSlide} className={classes.iconButton} />
+              <ChevronRightIcon onClick={nextSlide} className={classes.iconButton} />
+              </Box>
+              {summerinternship.map((summerinternship, index) => {
+                return (
+                  <Box>
+                    {index === current &&(
+                      <img src={summerinternship.image} alt="summerinternship images" />
+                    )}
+                  </Box>
+                )
+              })}
+            </Box>
             <Button
             variant="contained"
             color="secondary"
@@ -173,7 +252,7 @@ const College = () => {
             so that when the PIR_sensor gets motion it wakes the system to 
             send the message of the particular location
             </Typography>
-            <img src={college2} alt="" />
+            <img src={miniproject1} alt="" />
             <Button
             variant="contained"
             color="secondary"
@@ -187,6 +266,37 @@ const College = () => {
             </Button>
             </Box>
             </Box>
+            {isMobile ? (
+        <Grid container justify="space-between">
+          <Grid item>
+            <Button variant="contained" 
+            color="primary" 
+            component={Link} 
+            to={process.env.PUBLIC_URL + "/"} 
+            style={{ margin: "15px 0"}}
+            >
+              <ChevronLeftIcon />
+              <Typography variant="button">Home</Typography>
+              <HomeIcon style={{ marginLeft: 15 }} />
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button
+              variant="contained"
+              color="primary"
+              component={Link}
+              to={process.env.PUBLIC_URL + "/About"}
+              style={{ margin: "15px 0"}}
+            >
+              <PersonIcon style={{ marginRight: 15 }} />
+              <Typography variant="button">About</Typography>
+              <ChevronRightIcon />
+            </Button>
+          </Grid>
+        </Grid>
+      ) : (
+        <></>
+      )}
         </Box>
     )
 }

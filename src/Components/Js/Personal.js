@@ -3,13 +3,17 @@ import {
     makeStyles, 
     Box, Grid, Card, 
     CardContent, 
-    CardActions, 
+    CardActions,
+    useMediaQuery, 
     CardMedia,
     Button,
     Typography
 } from "@material-ui/core/";
 import CodeIcon from '@material-ui/icons/Code';
 import { useState } from 'react'
+import { Link } from "react-router-dom";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import PersonIcon from "@material-ui/icons/Person";
 
 import "../Css/Certificate.css"
 
@@ -109,6 +113,7 @@ const Personal = () => {
         }
     ])
     const classes = useStyles();
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
     return (
         <Box component="div" className={classes.mainContainer}>
             <Typography variant="h4" align="center" className={classes.heading} id="personal">
@@ -153,6 +158,23 @@ const Personal = () => {
                             </div>
             ))}
             </div>
+            {isMobile ? (
+        <Box textAlign="left">
+          <Button
+            component={Link}
+            variant="contained"
+            color="primary"
+            to={process.env.PUBLIC_URL + "/About"}
+            style={{ margin: "15px 0"}}
+          >
+            <ChevronLeftIcon />
+            <Typography variant="button">About</Typography>
+            <PersonIcon style={{ marginLeft: 15 }} />
+          </Button>
+        </Box>
+      ) : (
+        <> </>
+      )}
         </Box>
     )
 }
