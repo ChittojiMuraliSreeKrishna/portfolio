@@ -1,0 +1,22 @@
+.header-name {
+  color: red;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.tab-names {
+  list-style: none;
+  padding: 1rem 2rem;
+  text-transform: capitalize;
+}
+
+.tab-bar {
+  display: flex;
+}
+
+@media (min-width: 700px) {
+  .header{
+    display: flex;
+    justify-content: space-around;
+  }
+}

@@ -1,1 +1,8 @@
-<h1>Murali</h1>
+<div class="header">  
+  <h1 class="header-name">Murali</h1>
+  <ul class="tab-bar">
+    <li class="tab-names" *ngFor="let header of headers">
+      <app-anchor link="{{ header.link }}" background="white" color="green" text="{{ header.name }}"></app-anchor>
+    </li>
+  </ul>
+</div>
