@@ -1,7 +1,13 @@
+.header{
+  background-color: #282828;
+  width: 100%;
+}
+
 .header-name {
-  color: red;
-  font-weight: 500;
+  color: #076678;
+  font-weight: 600;
   font-size: 2rem;
+  margin: .5rem 0;
 }
 
 .tab-names {
@@ -18,5 +24,25 @@
   .header{
     display: flex;
     justify-content: space-around;
+  }
+}
+
+@media (max-width: 700px){
+  .header{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tab-bar{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #282828;
+  }
+
+  .tab-names{
+    margin: .5rem 0;
   }
 }

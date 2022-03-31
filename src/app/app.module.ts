@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -12,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { CollegeComponent } from './components/college/college.component';
 import { PersonalComponent } from './components/personal/personal.component';
+import { FontIconComponent } from './components/font-icon/font-icon.component';
 
 const appRoutes: Routes = [
   {
@@ -42,7 +42,8 @@ const appRoutes: Routes = [
     HomeComponent,
     AboutComponent,
     CollegeComponent,
-    PersonalComponent
+    PersonalComponent,
+    FontIconComponent
   ],
   imports: [
     BrowserModule,

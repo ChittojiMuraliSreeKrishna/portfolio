@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-anchor',
@@ -7,9 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AnchorComponent implements OnInit {
   @Input() text: string = '';
-  @Input() color: string = '';
-  @Input() background: string = '';
   @Input() link: string = '';
+  @Input() class: string = '';
+  @Input() faIcon: string = '';
+  faUser = faUser;
 
   constructor() { }
 
