@@ -1,1 +1,26 @@
-<p>college works!</p>
+<div class="college mainContainer">
+  <h2 class="heading">College Projects</h2>
+  <div class="timeLine">
+    <h3 class="timeLineYear timeLineItem">2018</h3>
+    <div class="timeLineItem">
+      <h4 class="subHeading">Summer InternShip</h4>
+      <p class="subtitle">
+        I have done a dynamic messaging website named smart radio which uses
+        HTML, CSS, javascript as frontend, PHP as backend, MySQL store the
+        information & googleTextToSpeech to convert the messages to speech,
+        this has users and admins, users send the messages by logging
+        inWhile admins have the right to play or Delete messages
+      </p>
+      <div class="imageCarousel">
+        <div class="carouselButtons">
+          <h5 class="iconButton"><</h5>
+          <h5 class="iconButton">></h5>
+        </div>
+        <div *ngFor="let image of images">
+          <img src="{{image.url}}" alt="{{image.name}}">
+        </div>
+      </div>
+      <app-anchor link="{{summerInternShipCode}}" text="Code" class="code-btn"></app-anchor>
+    </div>
+  </div>
+</div>

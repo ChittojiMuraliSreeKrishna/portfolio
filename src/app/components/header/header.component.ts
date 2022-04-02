@@ -9,7 +9,6 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 })
 export class HeaderComponent implements OnInit {
   @Output() headers: any[] = Headers
-  faUser = faUser as IconProp;
  
   constructor() { }
 

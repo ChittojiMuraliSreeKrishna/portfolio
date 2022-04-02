@@ -1,3 +1,15 @@
 .header-links {
   color: #ebdbb2;
 }
+
+.code-btn {
+  background-color: var(--colorBlue);
+  color: var(--colorLight);
+  font-size: 1.5rem;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.code-btn:hover{
+  color: var(--colorLight)
+}

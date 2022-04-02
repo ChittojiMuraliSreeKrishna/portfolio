@@ -1,4 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+html{
+  --colorLight: #fbf1c7;
+	--colorDarkest: #282828;
+	--colorDark: #3c3836;
+	--colorBlue: #458588;
+	/*Font Size*/
+	--fs-xl: 2.5rem;
+	--fs-lg: 2rem;
+	--fs-md: 1.5rem;
+	--fs-sm: 1rem;
+}
 a {
   text-decoration: none;
 }
@@ -9,4 +19,7 @@ a {
 }
 body{
   background: #fbf1c7;
+}
+img{
+  width: 100%;
 }
