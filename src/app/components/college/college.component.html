@@ -4,23 +4,33 @@
     <h3 class="timeLineYear timeLineItem">2018</h3>
     <div class="timeLineItem">
       <h4 class="subHeading">Summer InternShip</h4>
-      <p class="subtitle">
+      <p class="subtitle1">
         I have done a dynamic messaging website named smart radio which uses
         HTML, CSS, javascript as frontend, PHP as backend, MySQL store the
         information & googleTextToSpeech to convert the messages to speech,
         this has users and admins, users send the messages by logging
         inWhile admins have the right to play or Delete messages
       </p>
-      <div class="imageCarousel">
-        <div class="carouselButtons">
-          <h5 class="iconButton"><</h5>
-          <h5 class="iconButton">></h5>
-        </div>
-        <div *ngFor="let image of images">
-          <img src="{{image.url}}" alt="{{image.name}}">
-        </div>
+      <div class="image-container">
+        <img src="{{summerIntern1}}" alt="summerIntern">
       </div>
       <app-anchor link="{{summerInternShipCode}}" text="Code" class="code-btn"></app-anchor>
+    </div>
+    <h3 class="timeLineYear timeLineItem">2019</h3>
+    <div class="timeLineItem">
+      <h4 class="subHeading">Mini Project</h4>
+      <p class="subtitle1">
+        I have done my mini-project on IOT named armySecuritySystem which
+            sends co-ordinates by SMS or mail whenever the motion is detected,
+            in this i have used PIR_sensor(HCSR-501), wifi_module(ESP8266),
+            gsm_module(SIM800L), GPS_module(SIM28ML), so that when the
+            PIR_sensor gets motion it wakes the system to send the message of
+            the particular location
+      </p>
+      <div class="image-container">
+        <img src="{{miniProject1}}" alt="miniProject">
+      </div>
+      <app-anchor link="{{miniProjectCode}}" text="Code" class="code-btn"></app-anchor>
     </div>
   </div>
 </div>

@@ -45,10 +45,11 @@
   .tab-bar{
     display: flex;
     justify-content: space-around;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100vw;
     background-color: #282828;
+    z-index: 999;
   }
 
   .tab-names{
