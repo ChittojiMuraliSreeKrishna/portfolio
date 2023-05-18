@@ -1,0 +1,197 @@
+.outer_frame {
+  height: 550px;
+  background: var(--light);
+  max-width: 850px;
+  border-radius: 20px;
+}
+
+.my_pic {
+  height: 300px;
+  width: 300px;
+  margin: 0 2rem;
+}
+
+.outer_body {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: self-start;
+  margin-right: 1rem;
+}
+
+.my_desc {
+  font-size: var(--fs-md);
+  font-weight: 400;
+  text-align: justify;
+}
+
+.desc_container {
+  padding-top: 1rem;
+}
+
+@media (max-width: 800px) {
+  .outer_frame {
+    height: 900px;
+  }
+
+  .outer_body {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-right: 0;
+  }
+}
+
+.outer_header {
+  height: 40px;
+  background: #e1dfe1;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.outer_buttons {
+  height: 20px;
+  width: 20px;
+  min-height: 20px;
+  min-width: 20px;
+  border-radius: 10px;
+  background: var(--light);
+  margin: 0 4px;
+}
+
+.outer_header .red {
+  background: #dc354550;
+}
+
+.outer_header .green {
+  background: #28a74550;
+}
+
+.outer_header .yellow {
+  background: #ffc10750;
+}
+
+.outer_header .red:hover {
+  background: var(--danger);
+}
+
+.outer_header .green:hover {
+  background: var(--success);
+}
+
+.outer_header .yellow:hover {
+  background: var(--warning);
+}
+
+.buttons_container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 2.5rem;
+  padding-top: 0.5rem;
+}
+
+.contactMe {
+  margin: 2rem 0;
+}
+
+.contact__body {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--fs-md);
+  position: relative;
+  top: -12px;
+}
+.phoneno b {
+  color: var(--blue);
+}
+.email {
+  transform: translateY(-10px);
+}
+.email b {
+  color: var(--blue);
+}
+.coffecup {
+  width: 70px;
+  height: 70px;
+  background: var(--gray-dark);
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.coffecup::after {
+  content: "";
+  width: 70px;
+  height: 15px;
+  background: repeating-linear-gradient(45deg, var(--blue), var(--dark) 3px);
+  position: absolute;
+  left: 0px;
+  bottom: -15px;
+  border-radius: 0 0 5px 5px;
+}
+.coffe {
+  width: 64px;
+  position: relative;
+  left: -1px;
+  bottom: -5.2rem;
+  transform: translateY(-90px);
+  background: var(--dark);
+  width: 71px;
+  height: 35px;
+}
+.coffelogo {
+  background: var(--blue);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 18px;
+}
+.coffelogo::before {
+  content: "C";
+  color: var(--light);
+  font-weight: 500;
+  font-size: var(--fs-md);
+  position: relative;
+  top: -5px;
+  left: 7px;
+}
+.coffecap {
+  width: 80px;
+  height: 20px;
+  background: repeating-linear-gradient(90deg, var(--dark), var(--blue) 3px);
+  position: relative;
+  border-radius: 5px 5px 3px 3px;
+  top: -20px;
+  left: -5px;
+  border: 1px solid var(--dark);
+  border-bottom: 0;
+}
+.coffecap::before {
+  content: "";
+  height: 15px;
+  width: 60px;
+  background: repeating-linear-gradient(90deg, var(--dark), var(--blue) 3px);
+  position: absolute;
+  top: -16px;
+  right: 10px;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid var(--dark);
+  border-bottom: 0;
+}
+.coffecap::after {
+  content: "";
+  height: 8px;
+  width: 15px;
+  background: var(--blue);
+  position: absolute;
+  top: -22px;
+  right: 15px;
+  border-radius: 9px 0 0 0;
+}

@@ -1,7 +1,15 @@
+.Personal {
+  background: var(--light);
+  width: 100vw;
+  padding: 5vw;
+}
+
 .certificates {
+  max-width: 850px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin: 0 2rem;
+  background: var(--light);
 }
 
 .certificateImages {

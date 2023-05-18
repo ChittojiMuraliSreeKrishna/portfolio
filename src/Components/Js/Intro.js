@@ -1,51 +1,52 @@
-import { Box, Typography, useMediaQuery, Button } from "@material-ui/core";
-import { Link } from "react-router-dom";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import SchoolIcon from "@material-ui/icons/School";
-import React from 'react'
-import "../Css/Intro.css"
-
-
-import mine from "../Images/mine.jpg"
+import React from "react";
+import "../Css/Intro.css";
+import coding from "../Images/coding.avif";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaCodepen,
+  FaTwitter,
+  FaDev,
+} from "react-icons/fa";
 
 const Intro = () => {
-    const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
-    return (
+  return (
+    <div className="intro">
+      <div className="intro_subcontainer">
         <div>
-        <div className="intro" id="intro">
-            <div>
-            <img src={mine} alt="Intro Img" className="introImg" />
-            </div>
-            <div>
-            <h1 className="introHeading">
-                Hi I'm
-                <strong>
-                Murali Sree Krishna C
-                </strong>
-            </h1>
-            <h2 className="introSubHeading">Graduate-2020</h2>
-            </div>
-            </div>
-        {isMobile ? (
-        <Box textAlign="right">
-          <Button
-            component={Link}
-            variant="contained"
-            color="primary"
-            to={process.env.PUBLIC_URL + "/College"}
-            style={{ margin: "15px 0"}}
-          >
-            <SchoolIcon style={{ marginRight: 15 }} />
-            <Typography variant="button">College</Typography>
-            <ChevronRightIcon />
-          </Button>
-        </Box>
-      ) : (
-        <> </>
-      )}
+          <p className="sub_heading">
+            Hello World!, mySelf Murali <b>: )</b>
+            <br /> I'm a webDev & Python Developer,
+            <br /> Based in Hyderabad, Telangana.
+          </p>
+          <div>
+            <a
+              href="https://www.linkedin.com/in/murali-sree-krishna-chittoji-06a353170/"
+              className="links"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://github.com/ChittojiMuraliSreeKrishna"
+              className="links"
+            >
+              <FaGithub />
+            </a>
+            <a href="https://codepen.io/murali-sree-krishna" className="links">
+              <FaCodepen />
+            </a>
+            <a href="https://twitter.com/CmuraliSree" className="links">
+              <FaTwitter />
+            </a>
+            <a href="https://dev.to/cmuralisree" className="links">
+              <FaDev />
+            </a>
+          </div>
+        </div>
+        <img src={coding} className="intro_img" alt="coding" />
+      </div>
     </div>
-    )
-}
+  );
+};
 
-
-export default Intro
+export default Intro;

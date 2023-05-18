@@ -27,12 +27,6 @@ import project5 from "../Images/personal/ps5.png";
 import project6 from "../Images/personal/ps6.png";
 import project7 from "../Images/personal/ps7.png";
 
-// Certificates
-import certificate1 from "../Images/certificates/work1.png";
-import certificate2 from "../Images/certificates/work2.png";
-import certificate3 from "../Images/certificates/work3.png";
-import certificate4 from "../Images/certificates/work4.png";
-
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
     height: "100%",
@@ -40,48 +34,26 @@ const useStyles = makeStyles((theme) => ({
   cardContainer: {
     maxHeight: 345,
     margin: 10,
-    background: "#363736",
+    background: "#e1dfe1",
+    padding: 10,
   },
   cardBody: {
     height: "5rem",
-    color: "#fbf1c7",
-  },
-  heading: {
-    color: "#af3a03",
-    padding: "3rem 0",
-    fontWeight: 600,
-    textTransform: "uppercase",
+    color: "#000",
   },
   card: {
     margin: 10,
   },
   button: {
-    color: "#fbf1c7",
+    background: "#28a745",
+    color: "#f8f9fa",
     "&:hover": {
-      color: "#fbf1c7",
+      color: "#f8f9fa",
     },
   },
 }));
 
 const Personal = () => {
-  const [certificates] = useState([
-    {
-      id: 1,
-      img: certificate1,
-    },
-    {
-      id: 2,
-      img: certificate2,
-    },
-    {
-      id: 3,
-      img: certificate3,
-    },
-    {
-      id: 4,
-      img: certificate4,
-    },
-  ]);
   const [projects] = useState([
     {
       heading: "Social Media PHP",
@@ -115,80 +87,44 @@ const Personal = () => {
     },
   ]);
   const classes = useStyles();
-  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   return (
-    <Box component="div" className={classes.mainContainer}>
-      <Typography
-        variant="h4"
-        align="center"
-        className={classes.heading}
-        id="personal"
-      >
-        Personal Projects
-      </Typography>
-      <Grid container justify="center">
-        {projects.map((project, i) => (
-          <Grid item xs={10} sm={6} md={4} key={i}>
-            <Card className={classes.cardContainer}>
-              <CardMedia
-                component="img"
-                alt="Project 1"
-                height="140"
-                image={project.img}
-              />
-              <CardContent className={classes.cardBody}>
-                <Typography variant="h5" gutterBottom>
-                  {project.heading}
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button
-                  color="secondary"
-                  variant="contained"
-                  href={project.link}
-                  className={classes.button}
-                  startIcon={<CodeIcon />}
-                >
-                  Code
-                </Button>
-              </CardActions>
-            </Card>
+    <div>
+      <p className="sideHeadings">Personal Projects</p>
+      <div className="Personal">
+        <Box component="div" className={classes.mainContainer}>
+          <Grid container justify="center">
+            {projects.map((project, i) => (
+              <Grid item xs={10} sm={6} md={4} key={i}>
+                <Card className={classes.cardContainer}>
+                  <CardMedia
+                    component="img"
+                    alt="Project 1"
+                    height="140"
+                    image={project.img}
+                  />
+                  <CardContent className={classes.cardBody}>
+                    <Typography variant="h5" gutterBottom>
+                      {project.heading}
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button
+                      color="primary"
+                      variant="contained"
+                      href={project.link}
+                      className={classes.button}
+                      startIcon={<CodeIcon />}
+                    >
+                      Code
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
           </Grid>
-        ))}
-      </Grid>
-      <Typography
-        variant="h4"
-        align="center"
-        className={classes.heading}
-        id="certificates"
-      >
-        Certificates
-      </Typography>
-      <div className="certificates">
-        {certificates.map((certificate) => (
-          <div className="certificate-items" key={certificate.id}>
-            <img src={certificate.img} alt="" className="certificateImages" />
-          </div>
-        ))}
-      </div>
-      {isMobile ? (
-        <Box textAlign="left">
-          <Button
-            component={Link}
-            variant="contained"
-            color="primary"
-            to={process.env.PUBLIC_URL + "/About"}
-            style={{ margin: "15px 0" }}
-          >
-            <ChevronLeftIcon />
-            <Typography variant="button">About</Typography>
-            <PersonIcon style={{ marginLeft: 15 }} />
-          </Button>
         </Box>
-      ) : (
-        <> </>
-      )}
-    </Box>
+      </div>
+    </div>
   );
 };
 
