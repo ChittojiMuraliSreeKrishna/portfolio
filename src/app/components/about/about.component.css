@@ -30,7 +30,7 @@
 }
 
 .icons {
-  width: 30px;
+  width: 35px;
 }
 
 .boxStyling {
@@ -103,7 +103,8 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 2rem;
   margin: 1rem;
 }
 
@@ -223,9 +224,9 @@
 }
 
 .contact-me {
-  border: 0.25rem solid #282828;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  	border: 0.25rem solid #282828;
+  	border-radius: 10px;
+  	margin-bottom: 10px;
 	max-width: 600px;
 }
 
